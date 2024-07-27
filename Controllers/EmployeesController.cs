@@ -1,6 +1,7 @@
 ﻿using EmployeeAdminPortal.Converters;
 using EmployeeAdminPortal.Data;
 using EmployeeAdminPortal.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace EmployeeAdminPortal.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class EmployeesController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
